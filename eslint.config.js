@@ -1,44 +1,75 @@
-// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from 'eslint-plugin-storybook';
-
-import prettier from 'eslint-config-prettier';
-import { includeIgnoreFile } from '@eslint/compat';
+import { fixupPluginRules } from '@eslint/compat';
 import js from '@eslint/js';
+import prettier from 'eslint-config-prettier';
+import importPlugin from 'eslint-plugin-import';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import storybook from 'eslint-plugin-storybook';
 import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
-import { fileURLToPath } from 'node:url';
 import ts from 'typescript-eslint';
-import svelteConfig from './svelte.config.js';
 
-const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
-
-export default ts.config(
-	includeIgnoreFile(gitignorePath),
+/** @type {import('eslint').Linter.Config[]} */
+export default [
 	js.configs.recommended,
 	...ts.configs.recommended,
-	...svelte.configs.recommended,
+	...svelte.configs['flat/recommended'],
 	prettier,
-	...svelte.configs.prettier,
+	...svelte.configs['flat/prettier'],
 	{
 		languageOptions: {
-			globals: { ...globals.browser, ...globals.node }
-		},
-		rules: {
-			// typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
-			// see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-			'no-undef': 'off'
-		}
-	},
-	{
-		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
-		languageOptions: {
-			parserOptions: {
-				projectService: true,
-				extraFileExtensions: ['.svelte'],
-				parser: ts.parser,
-				svelteConfig
+			globals: {
+				...globals.browser,
+				...globals.node
 			}
 		}
 	},
-	storybook.configs['flat/recommended']
-);
+	{
+		plugins: {
+			['import']: fixupPluginRules(importPlugin),
+			['simple-import-sort']: simpleImportSort
+		}
+	},
+	{
+		files: ['**/*.svelte', '**/*.svelte.ts'],
+		languageOptions: {
+			parserOptions: {
+				parser: ts.parser
+			}
+		}
+	},
+	{
+		ignores: ['build/', '.svelte-kit/', 'dist/', '.pnpm-store/', 'storybook-static/']
+	},
+	{
+		rules: {
+			'no-console': ['error', { allow: ['warn', 'error'] }],
+			'consistent-return': 'error',
+			'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
+			'@typescript-eslint/consistent-type-assertions': 'error',
+			'@typescript-eslint/consistent-type-imports': 'error',
+			'@typescript-eslint/no-unused-vars': [
+				'error',
+				{ argsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_' }
+			],
+			'@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
+			'svelte/require-store-reactive-access': 'off',
+			'svelte/prefer-svelte-reactivity': 'off',
+			// Library links are plain hrefs the consuming app resolves.
+			'svelte/no-navigation-without-resolve': 'off',
+			'import/no-duplicates': 'error',
+			'simple-import-sort/imports': [
+				'error',
+				{
+					groups: [
+						['^\\u0000'],
+						['^node:', '^@?\\w', '^\\$app', '^~icons'],
+						['^\\$lib', '^\\$ui'],
+						['^\\.']
+					]
+				}
+			],
+			'simple-import-sort/exports': 'error'
+		}
+	},
+	...storybook.configs['flat/recommended']
+];
