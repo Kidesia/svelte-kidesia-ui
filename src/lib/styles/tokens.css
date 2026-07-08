@@ -1,10 +1,17 @@
 :root {
 	/* Base semantic colors - light mode */
 	--color-base-white: #ffffff;
-	--color-base-black: #000000;
+
+	/* Parametric tints: oklch L/C pairs combined with a component-set --hue */
+	--tint-soft-bg: 0.95 0.05;
+	--tint-soft-fg: 0.4 0.12;
+	--tint-strong-bg: 0.7 0.15;
+	--tint-strong-fg: 0.98 0.05;
 
 	/* Background colors */
 	--color-bg-primary: #f9f9f9;
+	--color-bg-page: var(--color-bg-primary);
+	--color-bg-inset: var(--color-bg-primary);
 	--color-bg-surface: #ffffff;
 	--color-bg-surface-hover: #fbfbfb;
 	--color-bg-secondary: #ebebeb;
@@ -51,10 +58,8 @@
 	--color-on-primary-subtle: oklch(0.3 0.08 var(--hue-primary));
 
 	/* Navigation specific */
-	--color-nav-item: oklch(0.45 0.01 58);
-	--color-nav-item-hover: rgba(0, 0, 0, 0.05);
-	--color-nav-item-active-bg: oklch(0.95 0.05 58);
-	--color-nav-item-active-fg: oklch(0.1 0.05 58);
+	--color-nav-bg: var(--color-bg-surface);
+	--color-nav-fg: var(--color-text-primary);
 
 	/* Semantic: Info */
 	--hue-info: 230;
@@ -77,12 +82,17 @@
 	--color-error-border: #fca5a5;
 	--color-error-surface-text: #823d3d;
 	--color-error-emphasis: #ef4444;
-	--color-status-error: rgb(208, 50, 50);
 
 	/* Semantic: Success */
+	--hue-success: 150;
 	--color-success: #10b981;
 	--color-success-fg: #ffffff;
 	--color-success-hover: #0e9e6e;
+	--color-success-bg: oklch(0.97 0.015 var(--hue-success));
+	--color-success-text: oklch(0.5 0.15 var(--hue-success));
+	--color-success-surface: oklch(0.97 0.02 var(--hue-success));
+	--color-success-border: oklch(0.8 0.1 var(--hue-success));
+	--color-success-surface-text: oklch(0.45 0.1 var(--hue-success));
 
 	/* Password strength indicator */
 	--color-strength-weak: hsl(0, 65%, 51%);
@@ -104,6 +114,10 @@
 	--color-viz-special: #a78bfa;
 
 	/* Semantic: Warning */
+	--hue-warning: 80;
+	--color-warning: #d97706;
+	--color-warning-fg: #ffffff;
+	--color-warning-bg: oklch(0.97 0.015 var(--hue-warning));
 	--color-warning-surface: #fff9e6;
 	--color-warning-border: #f7d154;
 	--color-warning-text: #7e5e3c;
@@ -128,13 +142,13 @@
 	/* Component specific: Grid/Table */
 	--color-grid-row-hover: oklch(0.97 0.05 58);
 
-	/* State: Disabled */
-	--color-disabled-text: oklch(0.8 0 var(--hue-primary));
-
 	/* Elevation: Shadows */
 	--shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.1);
 	--shadow-md: 0px 7px 29px rgba(100, 100, 111, 0.2);
 	--shadow-lg: 0px 3px 10px rgba(100, 100, 111, 0.2);
+
+	/* Focus */
+	--focus-ring: 2px solid var(--color-primary);
 
 	/* Overlays */
 	--color-overlay: rgba(0, 0, 0, 0.5);
@@ -143,15 +157,34 @@
 	/* Component specific: Tooltip */
 	--color-tooltip-bg: #333;
 	--color-tooltip-fg: white;
+
+	/* Radii */
+	--radius-xs: 0.25rem;
+	--radius-sm: 0.375rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 0.7rem;
+	--radius-pill: 999px;
+
+	/* Typography */
+	--font-body: 'Nunito', system-ui, sans-serif;
+	--font-display: var(--font-body);
+	--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .dark-mode {
 	/* Base semantic colors - dark mode */
 	--color-base-white: #ffffff;
-	--color-base-black: #000000;
+
+	/* Parametric tints: oklch L/C pairs combined with a component-set --hue */
+	--tint-soft-bg: 0.95 0.05;
+	--tint-soft-fg: 0.4 0.12;
+	--tint-strong-bg: 0.7 0.15;
+	--tint-strong-fg: 0.98 0.05;
 
 	/* Background colors - softer, friendlier dark theme */
 	--color-bg-primary: #1c1c1c;
+	--color-bg-page: var(--color-bg-primary);
+	--color-bg-inset: var(--color-bg-primary);
 	--color-bg-surface: #252525;
 
 	/* Data-viz series (validated against the dark surface) */
@@ -205,10 +238,8 @@
 	--color-on-primary-subtle: oklch(0.97 0.08 var(--hue-primary));
 
 	/* Navigation specific */
-	--color-nav-item: oklch(0.72 0.02 58);
-	--color-nav-item-hover: rgba(255, 255, 255, 0.1);
-	--color-nav-item-active-bg: oklch(0.3 0.05 58);
-	--color-nav-item-active-fg: oklch(0.88 0.08 58);
+	--color-nav-bg: var(--color-bg-surface);
+	--color-nav-fg: var(--color-text-primary);
 
 	/* Semantic: Info */
 	--hue-info: 230;
@@ -231,12 +262,17 @@
 	--color-error-border: oklch(0.45 0.12 var(--hue-error));
 	--color-error-surface-text: oklch(0.78 0.12 var(--hue-error));
 	--color-error-emphasis: oklch(0.68 0.18 var(--hue-error));
-	--color-status-error: oklch(0.65 0.2 var(--hue-error));
 
 	/* Semantic: Success */
+	--hue-success: 150;
 	--color-success: oklch(0.68 0.15 150);
 	--color-success-fg: #1c1c1c;
 	--color-success-hover: oklch(0.63 0.15 150);
+	--color-success-bg: oklch(0.25 0.04 var(--hue-success));
+	--color-success-text: oklch(0.73 0.12 var(--hue-success));
+	--color-success-surface: oklch(0.23 0.05 var(--hue-success));
+	--color-success-border: oklch(0.45 0.1 var(--hue-success));
+	--color-success-surface-text: oklch(0.78 0.1 var(--hue-success));
 
 	--color-strength-weak: hsl(0, 65%, 51%);
 	--color-strength-fair: hsl(35, 85%, 50%);
@@ -249,6 +285,10 @@
 	--color-grey: oklch(0.6 0.02 58);
 
 	/* Semantic: Warning */
+	--hue-warning: 80;
+	--color-warning: oklch(0.7 0.14 var(--hue-warning));
+	--color-warning-fg: #141414;
+	--color-warning-bg: oklch(0.25 0.04 var(--hue-warning));
 	--color-warning-surface: oklch(0.3 0.08 80);
 	--color-warning-border: oklch(0.55 0.12 80);
 	--color-warning-text: oklch(0.83 0.1 80);
@@ -273,13 +313,13 @@
 	/* Component specific: Grid/Table */
 	--color-grid-row-hover: oklch(0.3 0.03 58);
 
-	/* State: Disabled */
-	--color-disabled-text: oklch(0.45 0.02 var(--hue-primary));
-
 	/* Elevation: Shadows - softer in friendlier dark mode */
 	--shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.4);
 	--shadow-md: 0px 7px 29px rgba(0, 0, 0, 0.5);
 	--shadow-lg: 0px 3px 10px rgba(0, 0, 0, 0.4);
+
+	/* Focus */
+	--focus-ring: 2px solid var(--color-primary);
 
 	/* Overlays */
 	--color-overlay: rgba(0, 0, 0, 0.65);
@@ -288,6 +328,29 @@
 	/* Component specific: Tooltip */
 	--color-tooltip-bg: #e8e8e8;
 	--color-tooltip-fg: #1a1a1a;
+}
+
+/* Experimental warm scheme from kidesia-frontend/_design/design.md, toggled via a
+   class like .dark-mode. Pure data — components must not reference this class.
+   Primary values derive from brand.orange #FF9D47 / #EB6D00 on the hue-56 ramp. */
+.theme-warm {
+	--color-bg-page: #fef7f0;
+	--color-bg-surface: #ffffff;
+	--color-border-primary: #ebebeb;
+
+	--color-text-primary: #1f1f1f;
+	--color-text-secondary: #393939;
+	--color-text-tertiary: #525252;
+	--color-text-muted: #858585;
+	--color-text-disabled: #9e9e9e;
+
+	--hue-primary: 58;
+	--color-primary: oklch(0.78 0.155 var(--hue-primary));
+	--color-primary-fg: #1f1f1f;
+	--color-primary-hover: oklch(0.7 0.17 var(--hue-primary));
+
+	--shadow-sm: -4px -4px 14px 0 rgba(125, 88, 3, 0.08);
+	--focus-ring: 3px solid rgba(235, 109, 0, 0.18);
 }
 
 .tooltip-popover {

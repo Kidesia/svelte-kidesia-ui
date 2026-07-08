@@ -19,7 +19,7 @@
 	.message {
 		width: 100%;
 		padding: 0.6rem 1rem;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 	}
 
 	.message-info {

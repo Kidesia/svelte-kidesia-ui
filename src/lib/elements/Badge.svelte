@@ -54,7 +54,7 @@
 		max-width: 100%;
 		line-height: initial;
 		padding: 0.25rem 0.75rem;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
@@ -72,17 +72,17 @@
 			padding: 0.125rem 0.5rem;
 			gap: 0.25rem;
 			min-width: unset;
-			border-radius: 0.375rem;
+			border-radius: var(--radius-sm);
 		}
 
 		&.variant-hue {
-			background-color: oklch(95% 12.5% var(--hue));
-			color: oklch(40% 30% var(--hue));
+			background-color: oklch(var(--tint-soft-bg) var(--hue));
+			color: oklch(var(--tint-soft-fg) var(--hue));
 		}
 
 		:global(.dark-mode) &.variant-hue {
-			background-color: oklch(70% 37.5% var(--hue));
-			color: oklch(98% 12.5% var(--hue));
+			background-color: oklch(var(--tint-strong-bg) var(--hue));
+			color: oklch(var(--tint-strong-fg) var(--hue));
 		}
 
 		&.variant-neutral {

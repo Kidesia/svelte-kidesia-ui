@@ -25,7 +25,7 @@
 		background-color: var(--color-bg-surface);
 		padding: 0.25rem 0.5rem;
 		border: 1px solid var(--color-border-primary);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		font-size: 0.875rem;
 		appearance: none;
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");

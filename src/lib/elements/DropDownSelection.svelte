@@ -124,7 +124,7 @@
 			width: 1.25rem;
 			height: 1.25rem;
 			border: 1.5px solid var(--color-border-secondary);
-			border-radius: 0.25rem;
+			border-radius: var(--radius-xs);
 			background-color: var(--color-bg-surface);
 			flex-shrink: 0;
 			transition:
@@ -170,7 +170,7 @@
 		}
 
 		input:focus-visible + .checkbox-box {
-			outline: 2px solid var(--color-primary);
+			outline: var(--focus-ring);
 			outline-offset: 2px;
 		}
 	}

@@ -87,7 +87,7 @@
 		align-items: center;
 		gap: 0.5rem;
 		padding: 0.375rem 0.5rem;
-		border-radius: 0.375rem;
+		border-radius: var(--radius-sm);
 		background: none;
 		border: none;
 		font: inherit;

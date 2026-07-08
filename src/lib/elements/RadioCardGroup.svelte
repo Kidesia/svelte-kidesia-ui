@@ -65,7 +65,7 @@
 		flex: 1 1 45%;
 		gap: 0.25rem;
 		cursor: pointer;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		background-color: var(--color-bg-surface);
 		border: 1px solid var(--color-border-primary);
 		padding: 1rem;

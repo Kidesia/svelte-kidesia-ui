@@ -21,7 +21,7 @@
 		background-color: var(--color-bg-surface);
 		padding: 0.25rem 0.5rem;
 		border: 1px solid var(--color-border-primary);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		font-size: 0.875rem;
 	}
 </style>

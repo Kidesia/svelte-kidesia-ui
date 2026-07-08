@@ -79,7 +79,11 @@
 		"vitest": "^4.0.10"
 	},
 	"keywords": [
-		"svelte"
+		"svelte",
+		"sveltekit",
+		"components",
+		"ui",
+		"component-library"
 	],
 	"pnpm": {
 		"onlyBuiltDependencies": [
@@ -94,5 +98,16 @@
 		"dompurify": "^3.3.1",
 		"svelte-floating-ui": "^1.6.2"
 	},
-	"license": "MIT"
+	"license": "MIT",
+	"description": "Shared Svelte 5 component library of the Kidesia / Timesia frontend family",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kidesia/svelte-kidesia-ui.git"
+	},
+	"homepage": "https://github.com/kidesia/svelte-kidesia-ui#readme",
+	"bugs": "https://github.com/kidesia/svelte-kidesia-ui/issues",
+	"publishConfig": {
+		"access": "public"
+	},
+	"packageManager": "pnpm@10.33.0"
 }

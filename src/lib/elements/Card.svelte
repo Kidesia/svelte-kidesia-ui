@@ -85,7 +85,7 @@
 	.card {
 		background-color: var(--color-bg-surface);
 		border: 1px solid var(--color-border-primary);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		display: flex;
 		flex-direction: column;
 		text-decoration: none;
@@ -94,7 +94,7 @@
 			all: unset;
 			background-color: var(--color-bg-surface);
 			border: 1px solid var(--color-border-primary);
-			border-radius: 0.5rem;
+			border-radius: var(--radius-md);
 			display: flex;
 			flex-direction: column;
 			width: 100%;
@@ -117,14 +117,14 @@
 		&:where(a):focus-visible,
 		&:where(button):focus-visible {
 			border-color: var(--color-primary);
-			outline: 2px solid var(--color-primary);
+			outline: var(--focus-ring);
 			outline-offset: -2px;
 		}
 
 		&:where(a).has-action:focus-within,
 		&:where(button).has-action:focus-within {
 			border-color: var(--color-primary);
-			outline: 2px solid var(--color-primary);
+			outline: var(--focus-ring);
 			outline-offset: -2px;
 		}
 
@@ -217,19 +217,19 @@
 		line-height: 1;
 		width: 2.25rem;
 		height: 2.25rem;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
 		&:not(.grey) {
-			background-color: oklch(0.95 0.05 var(--hue));
-			color: oklch(0.4 0.12 var(--hue));
+			background-color: oklch(var(--tint-soft-bg) var(--hue));
+			color: oklch(var(--tint-soft-fg) var(--hue));
 		}
 
 		:global(.dark-mode) &:not(.grey) {
-			background-color: oklch(0.7 0.15 var(--hue));
-			color: oklch(0.98 0.05 var(--hue));
+			background-color: oklch(var(--tint-strong-bg) var(--hue));
+			color: oklch(var(--tint-strong-fg) var(--hue));
 		}
 	}
 </style>

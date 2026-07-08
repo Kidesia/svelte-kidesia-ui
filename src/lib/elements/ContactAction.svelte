@@ -34,7 +34,7 @@
 		max-width: 100%;
 		padding: 0.25rem 0.625rem;
 		border: 1px solid var(--color-border-subtle);
-		border-radius: 999px;
+		border-radius: var(--radius-pill);
 		background-color: var(--color-bg-surface);
 		color: var(--color-text-primary);
 		font-size: 0.875rem;

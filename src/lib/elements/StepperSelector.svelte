@@ -89,11 +89,11 @@
 		line-height: 1;
 
 		&:first-child {
-			border-radius: calc(0.5rem - 1px) 0 0 calc(0.5rem - 1px);
+			border-radius: calc(var(--radius-md) - 1px) 0 0 calc(var(--radius-md) - 1px);
 		}
 
 		&:last-child {
-			border-radius: 0 calc(0.5rem - 1px) calc(0.5rem - 1px) 0;
+			border-radius: 0 calc(var(--radius-md) - 1px) calc(var(--radius-md) - 1px) 0;
 		}
 
 		&:hover:not(:disabled) {

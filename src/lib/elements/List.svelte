@@ -105,7 +105,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		border-radius: 0.7rem;
+		border-radius: var(--radius-lg);
 		background-color: var(--color-bg-surface);
 		min-height: 100px;
 	}
@@ -118,7 +118,7 @@
 	.group-block {
 		display: flex;
 		flex-direction: column;
-		border-radius: 0.7rem;
+		border-radius: var(--radius-lg);
 		background-color: var(--color-bg-surface);
 	}
 
@@ -214,6 +214,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 0.7rem;
+		border-radius: var(--radius-lg);
 	}
 </style>

@@ -82,7 +82,7 @@
 		padding: 0.5rem 2rem;
 		height: calc(1.5rem + 0.5rem + 2px);
 		border: 1px solid var(--search-input-border-color);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		font-size: 0.875rem;
 		min-width: 0;
 		width: 140px;

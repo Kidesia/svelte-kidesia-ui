@@ -50,6 +50,32 @@ pnpm test        # vitest (unit)
 pnpm build       # vite build + svelte-package + publint
 ```
 
+## Releasing
+
+The package is published publicly to [npm](https://www.npmjs.com/package/kidesia-ui)
+by the `Release` workflow whenever a `v*` tag is pushed. The workflow verifies lint,
+types, and tests, builds via `svelte-package`, validates the result with `publint`,
+and publishes with npm provenance. It requires an `NPM_TOKEN` repository secret (an
+npm automation token with publish rights for `kidesia-ui`), and it fails if the tag
+does not match the `version` in `package.json`.
+
+To release:
+
+1. Bump `version` in `package.json` and land that change on `main`.
+2. On GitHub, go to Releases → _Draft a new release_, enter the matching tag
+   (e.g. `v0.1.0`, created on publish), target `main`, optionally generate release
+   notes, and publish. The created tag triggers the workflow.
+
+Alternatively, tag from the command line on the merged commit:
+
+```sh
+git tag v0.1.0 && git push origin v0.1.0
+```
+
+In a jujutsu checkout, bump the version with
+`npm version 0.1.0 --no-git-tag-version`, commit and push with `jj` as usual, and
+create the tag with plain git as above (colocated repos share the same refs).
+
 Components live in `src/lib/elements/` and mirror the app files as closely as possible
 so app-to-library diffs stay reviewable during the migration. Conventions are documented
 in `CLAUDE.md`; the extraction/migration plan and its status live in
