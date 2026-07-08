@@ -223,13 +223,13 @@
 		align-items: center;
 
 		&:not(.grey) {
-			background-color: oklch(0.95 0.05 var(--hue));
-			color: oklch(0.4 0.12 var(--hue));
+			background-color: oklch(var(--tint-soft-bg) var(--hue));
+			color: oklch(var(--tint-soft-fg) var(--hue));
 		}
 
 		:global(.dark-mode) &:not(.grey) {
-			background-color: oklch(0.7 0.15 var(--hue));
-			color: oklch(0.98 0.05 var(--hue));
+			background-color: oklch(var(--tint-strong-bg) var(--hue));
+			color: oklch(var(--tint-strong-fg) var(--hue));
 		}
 	}
 </style>

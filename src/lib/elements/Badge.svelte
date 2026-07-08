@@ -76,13 +76,13 @@
 		}
 
 		&.variant-hue {
-			background-color: oklch(95% 12.5% var(--hue));
-			color: oklch(40% 30% var(--hue));
+			background-color: oklch(var(--tint-soft-bg) var(--hue));
+			color: oklch(var(--tint-soft-fg) var(--hue));
 		}
 
 		:global(.dark-mode) &.variant-hue {
-			background-color: oklch(70% 37.5% var(--hue));
-			color: oklch(98% 12.5% var(--hue));
+			background-color: oklch(var(--tint-strong-bg) var(--hue));
+			color: oklch(var(--tint-strong-fg) var(--hue));
 		}
 
 		&.variant-neutral {

@@ -76,7 +76,7 @@
 		font-variant-numeric: tabular-nums;
 
 		&.negative {
-			color: var(--color-status-error);
+			color: var(--color-error-emphasis);
 		}
 
 		&.positive {

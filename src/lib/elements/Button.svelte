@@ -141,7 +141,7 @@
 
 			&.disabled {
 				background-color: var(--color-primary-disabled);
-				color: var(--color-disabled-text);
+				color: var(--color-text-disabled);
 			}
 
 			&.toggled {

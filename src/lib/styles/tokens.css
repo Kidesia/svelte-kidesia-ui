@@ -1,7 +1,12 @@
 :root {
 	/* Base semantic colors - light mode */
 	--color-base-white: #ffffff;
-	--color-base-black: #000000;
+
+	/* Parametric tints: oklch L/C pairs combined with a component-set --hue */
+	--tint-soft-bg: 0.95 0.05;
+	--tint-soft-fg: 0.4 0.12;
+	--tint-strong-bg: 0.7 0.15;
+	--tint-strong-fg: 0.98 0.05;
 
 	/* Background colors */
 	--color-bg-primary: #f9f9f9;
@@ -77,7 +82,6 @@
 	--color-error-border: #fca5a5;
 	--color-error-surface-text: #823d3d;
 	--color-error-emphasis: #ef4444;
-	--color-status-error: rgb(208, 50, 50);
 
 	/* Semantic: Success */
 	--color-success: #10b981;
@@ -128,9 +132,6 @@
 	/* Component specific: Grid/Table */
 	--color-grid-row-hover: oklch(0.97 0.05 58);
 
-	/* State: Disabled */
-	--color-disabled-text: oklch(0.8 0 var(--hue-primary));
-
 	/* Elevation: Shadows */
 	--shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.1);
 	--shadow-md: 0px 7px 29px rgba(100, 100, 111, 0.2);
@@ -148,7 +149,12 @@
 .dark-mode {
 	/* Base semantic colors - dark mode */
 	--color-base-white: #ffffff;
-	--color-base-black: #000000;
+
+	/* Parametric tints: oklch L/C pairs combined with a component-set --hue */
+	--tint-soft-bg: 0.95 0.05;
+	--tint-soft-fg: 0.4 0.12;
+	--tint-strong-bg: 0.7 0.15;
+	--tint-strong-fg: 0.98 0.05;
 
 	/* Background colors - softer, friendlier dark theme */
 	--color-bg-primary: #1c1c1c;
@@ -231,7 +237,6 @@
 	--color-error-border: oklch(0.45 0.12 var(--hue-error));
 	--color-error-surface-text: oklch(0.78 0.12 var(--hue-error));
 	--color-error-emphasis: oklch(0.68 0.18 var(--hue-error));
-	--color-status-error: oklch(0.65 0.2 var(--hue-error));
 
 	/* Semantic: Success */
 	--color-success: oklch(0.68 0.15 150);
@@ -272,9 +277,6 @@
 
 	/* Component specific: Grid/Table */
 	--color-grid-row-hover: oklch(0.3 0.03 58);
-
-	/* State: Disabled */
-	--color-disabled-text: oklch(0.45 0.02 var(--hue-primary));
 
 	/* Elevation: Shadows - softer in friendlier dark mode */
 	--shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.4);
