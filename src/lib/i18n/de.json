@@ -1,0 +1,87 @@
+{
+	"children": {
+		"months_one": "{{count}} Monat",
+		"months_other": "{{count}} Monate",
+		"monthsShort_one": "{{count}}M",
+		"monthsShort_other": "{{count}}M",
+		"years_one": "{{count}} Jahr",
+		"years_other": "{{count}} Jahre",
+		"yearsShort_one": "{{count}}J",
+		"yearsShort_other": "{{count}}J"
+	},
+	"common": {
+		"all": "Alle",
+		"clear": "Löschen",
+		"close": "Schließen",
+		"comingSoon": "Bald verfügbar",
+		"confirm": "Bestätigen",
+		"confirmDelete": "Löschen bestätigen",
+		"daysShort": "d",
+		"delete": "Löschen",
+		"discard": "Änderungen verwerfen",
+		"dismiss": "Schliessen",
+		"genericError": "Etwas ist schiefgelaufen",
+		"hidePassword": "Passwort verbergen",
+		"hoursShort": "Std.",
+		"minutesShort": "Min.",
+		"next": "Weiter",
+		"nextDay": "Nächster Tag",
+		"nextMonth": "Nächster Monat",
+		"nextYear": "Nächstes Jahr",
+		"noEntries": "Keine Einträge",
+		"noItemsFound": "Keine Einträge gefunden",
+		"openCount": "{{n}} offene",
+		"openFullPage": "Als eigene Seite öffnen",
+		"pagination": {
+			"next": "Nächste Seite",
+			"pageOf": "Seite {{page}} von {{lastPage}}",
+			"perPage": "pro Seite",
+			"previous": "Vorherige Seite",
+			"results_one": "{{count}} Ergebnis",
+			"results_other": "{{count}} Ergebnisse"
+		},
+		"passwordFair": "Mittel",
+		"passwordGood": "Gut",
+		"passwordStrong": "Stark",
+		"passwordWeak": "Schwach",
+		"pause": "Pause",
+		"previous": "Zurück",
+		"previousDay": "Vorheriger Tag",
+		"previousMonth": "Vorheriger Monat",
+		"previousYear": "Vorheriges Jahr",
+		"resize": "Grösse ändern",
+		"retry": "Erneut versuchen",
+		"search": "Suchen",
+		"selectAll": "Alle auswählen",
+		"selectOption": "Option auswählen",
+		"showAll": "Alle anzeigen",
+		"showPassword": "Passwort anzeigen",
+		"showingNOfTotal": "{{n}} von {{total}}"
+	},
+	"dialog": {
+		"cancel": "Abbrechen",
+		"confirmDiscardChanges": "Ungespeicherte Änderungen verwerfen?",
+		"submit": "Speichern"
+	},
+	"errors": {
+		"noAccess": "Sie haben keinen Zugriff auf diese Seite.",
+		"unexpectedError": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut."
+	},
+	"list": {
+		"all": "Alle",
+		"clearFilters": "Alle Filter entfernen",
+		"filter": "Filter",
+		"sort": "Sortieren"
+	},
+	"weekdays": {
+		"short": {
+			"0": "So",
+			"1": "Mo",
+			"2": "Di",
+			"3": "Mi",
+			"4": "Do",
+			"5": "Fr",
+			"6": "Sa"
+		}
+	}
+}

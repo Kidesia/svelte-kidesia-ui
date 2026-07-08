@@ -1,0 +1,87 @@
+{
+	"children": {
+		"months_one": "{{count}} month",
+		"months_other": "{{count}} months",
+		"monthsShort_one": "{{count}}mo",
+		"monthsShort_other": "{{count}}mos",
+		"years_one": "{{count}} year",
+		"years_other": "{{count}} years",
+		"yearsShort_one": "{{count}}yr",
+		"yearsShort_other": "{{count}}yrs"
+	},
+	"common": {
+		"all": "All",
+		"clear": "Clear",
+		"close": "Close",
+		"comingSoon": "Coming soon",
+		"confirm": "Confirm",
+		"confirmDelete": "Confirm delete",
+		"daysShort": "d",
+		"delete": "Delete",
+		"discard": "Discard changes",
+		"dismiss": "Dismiss",
+		"genericError": "Something went wrong",
+		"hidePassword": "Hide password",
+		"hoursShort": "h",
+		"minutesShort": "min",
+		"next": "Next",
+		"nextDay": "Next Day",
+		"nextMonth": "Next Month",
+		"nextYear": "Next Year",
+		"noEntries": "No entries",
+		"noItemsFound": "No items found",
+		"openCount": "{{n}} open",
+		"openFullPage": "Open as full page",
+		"pagination": {
+			"next": "Next page",
+			"pageOf": "Page {{page}} of {{lastPage}}",
+			"perPage": "per page",
+			"previous": "Previous page",
+			"results_one": "{{count}} result",
+			"results_other": "{{count}} results"
+		},
+		"passwordFair": "Fair",
+		"passwordGood": "Good",
+		"passwordStrong": "Strong",
+		"passwordWeak": "Weak",
+		"pause": "Break",
+		"previous": "Previous",
+		"previousDay": "Previous Day",
+		"previousMonth": "Previous Month",
+		"previousYear": "Previous Year",
+		"resize": "Resize",
+		"retry": "Retry",
+		"search": "Search",
+		"selectAll": "Select all",
+		"selectOption": "Select option",
+		"showAll": "Show all",
+		"showPassword": "Show password",
+		"showingNOfTotal": "{{n}} of {{total}}"
+	},
+	"dialog": {
+		"cancel": "Cancel",
+		"confirmDiscardChanges": "Discard unsaved changes?",
+		"submit": "Submit"
+	},
+	"errors": {
+		"noAccess": "You do not have access to this page.",
+		"unexpectedError": "An unexpected error occurred. Please try again."
+	},
+	"list": {
+		"all": "All",
+		"clearFilters": "Clear all filters",
+		"filter": "Filter",
+		"sort": "Sort"
+	},
+	"weekdays": {
+		"short": {
+			"0": "Sun",
+			"1": "Mon",
+			"2": "Tue",
+			"3": "Wed",
+			"4": "Thu",
+			"5": "Fri",
+			"6": "Sat"
+		}
+	}
+}

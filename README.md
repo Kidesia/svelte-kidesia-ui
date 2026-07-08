@@ -1,58 +1,56 @@
-# Svelte library
+# kidesia-ui
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+Shared Svelte 5 component library of the Kidesia / Timesia frontend family, extracted
+from the apps' `$ui/elements` folders. `timesia-frontend` and `kidesia-frontend` are the
+reference consumers.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Consuming the library
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+pnpm add kidesia-ui
 ```
 
-## Developing
+Requirements in the consuming app:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- **Svelte 5** (peer dependency).
+- **unplugin-icons** with `@iconify/json`, configured in Vite with
+  `Icons({ compiler: 'svelte' })` — components import icons as
+  `~icons/material-symbols/...`.
+- **Design tokens**: import the stylesheet once, e.g. in the root layout:
+
+  ```ts
+  import 'kidesia-ui/tokens.css';
+  ```
+
+  All colors are consumed via `--color-*` custom properties; override tokens after the
+  import to theme. Dark mode is activated by a `dark-mode` class on `body`.
+
+- **i18n** (optional but recommended): bind the library to the app's i18next instance
+  during startup. The library registers its bundled `de`/`en` texts under the `ui`
+  namespace; without setup, components fall back to the bundled English strings.
+
+  ```ts
+  import i18next from 'i18next';
+  import { setupUiI18n } from 'kidesia-ui';
+
+  setupUiI18n(i18next);
+  ```
+
+  Individual texts can be overridden via
+  `i18next.addResourceBundle('de', 'ui', overrides, true, true)`.
+
+## Development
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm install
+pnpm storybook   # component catalog / development environment
+pnpm dev         # minimal smoke-test page
+pnpm fix:all     # eslint --fix, prettier, svelte-check
+pnpm test        # vitest (unit)
+pnpm build       # vite build + svelte-package + publint
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```sh
-npm pack
-```
-
-To create a production version of your showcase app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```sh
-npm publish
-```
+Components live in `src/lib/elements/` and mirror the app files as closely as possible
+so app-to-library diffs stay reviewable during the migration. Conventions are documented
+in `CLAUDE.md`; the extraction/migration plan and its status live in
+`docs/extraction-plan.md`.

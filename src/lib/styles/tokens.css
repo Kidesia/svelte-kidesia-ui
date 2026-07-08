@@ -1,0 +1,308 @@
+:root {
+	/* Base semantic colors - light mode */
+	--color-base-white: #ffffff;
+	--color-base-black: #000000;
+
+	/* Background colors */
+	--color-bg-primary: #f9f9f9;
+	--color-bg-surface: #ffffff;
+	--color-bg-surface-hover: #fbfbfb;
+	--color-bg-secondary: #ebebeb;
+	--color-bg-tertiary: #f9fafb;
+	--color-bg-subtle: #f8f8f8;
+	--color-bg-subtle-hover: oklch(0.96 0.03 58);
+
+	/* Border and divider colors */
+	--color-border-primary: #e0e0e0;
+	--color-border-secondary: #ccc;
+	--color-border-tertiary: #ddd;
+	--color-border-subtle: #eee;
+	--color-divider: #f0f0f0;
+
+	/* Text colors */
+	--color-text-primary: #1c1c1c;
+	--color-text-secondary: #374151;
+	--color-text-tertiary: #6b7280;
+	--color-text-muted: #757575;
+	--color-text-disabled: #9ca3af;
+
+	/* Icon colors */
+	--color-icon-primary: #aaaaaa;
+	--color-icon-secondary: oklch(0.65 0.02 58);
+	--color-icon-active: oklch(0.55 0.05 58);
+	--filter-native-picker-indicator: none;
+
+	/* Interactive element colors */
+	--color-interactive: var(--color-text-secondary);
+	--color-interactive-hover: rgba(0, 0, 0, 0.05);
+	--color-interactive-hover-bg: oklch(0.98 0.02 58);
+	--color-interactive-active-bg: oklch(0.95 0.05 58);
+	--color-interactive-active-fg: oklch(0.1 0.05 58);
+	--color-interactive-active-hover: oklch(0.92 0.05 58);
+	--color-on-surface: var(--color-text-primary);
+
+	/* Brand/Primary colors */
+	--hue-primary: 56;
+	--color-primary: oklch(0.75 0.15 var(--hue-primary));
+	--color-primary-fg: #ffffff;
+	--color-primary-hover: oklch(0.8 0.125 var(--hue-primary));
+	--color-primary-disabled: oklch(0.88 0.08 var(--hue-primary));
+	--color-primary-subtle: oklch(0.97 0.015 var(--hue-primary));
+	--color-on-primary-subtle: oklch(0.3 0.08 var(--hue-primary));
+
+	/* Navigation specific */
+	--color-nav-item: oklch(0.45 0.01 58);
+	--color-nav-item-hover: rgba(0, 0, 0, 0.05);
+	--color-nav-item-active-bg: oklch(0.95 0.05 58);
+	--color-nav-item-active-fg: oklch(0.1 0.05 58);
+
+	/* Semantic: Info */
+	--hue-info: 230;
+	--color-info: oklch(0.75 0.15 var(--hue-info));
+	--color-info-fg: #ffffff;
+	--color-info-bg: oklch(0.95 0.015 var(--hue-info));
+	--color-info-text: oklch(0.5 0.15 var(--hue-info));
+	--color-info-surface: #ecfeff;
+	--color-info-border: #83ccd4;
+	--color-info-surface-text: #2d686e;
+	--color-link: #2563eb;
+
+	/* Semantic: Error/Danger */
+	--hue-error: 20;
+	--color-error: oklch(0.75 0.15 var(--hue-error));
+	--color-error-fg: #ffffff;
+	--color-error-bg: oklch(0.97 0.015 var(--hue-error));
+	--color-error-text: oklch(0.5 0.15 var(--hue-error));
+	--color-error-surface: #ffedec;
+	--color-error-border: #fca5a5;
+	--color-error-surface-text: #823d3d;
+	--color-error-emphasis: #ef4444;
+	--color-status-error: rgb(208, 50, 50);
+
+	/* Semantic: Success */
+	--color-success: #10b981;
+	--color-success-fg: #ffffff;
+	--color-success-hover: #0e9e6e;
+
+	/* Password strength indicator */
+	--color-strength-weak: hsl(0, 65%, 51%);
+	--color-strength-fair: hsl(35, 85%, 50%);
+	--color-strength-good: hsl(80, 60%, 42%);
+	--color-strength-strong: hsl(140, 60%, 38%);
+
+	/* Status colors */
+	--color-green: oklch(0.68 0.15 160);
+	--color-orange: oklch(0.73 0.15 60);
+	--color-grey: oklch(78.261% 0.00009 271.152);
+
+	/* Data-viz series (validated: lightness band, chroma, CVD; sub-3:1 contrast
+	   is relieved by tooltips and the accompanying table views) */
+	--color-viz-positive: #31c493;
+	--color-viz-info: #54a3ef;
+	--color-viz-attention: #eda323;
+	--color-viz-negative: #f07573;
+	--color-viz-special: #a78bfa;
+
+	/* Semantic: Warning */
+	--color-warning-surface: #fff9e6;
+	--color-warning-border: #f7d154;
+	--color-warning-text: #7e5e3c;
+
+	/* Semantic: Purple (for special states) */
+	--hue-purple: 300;
+	--color-purple: oklch(0.75 0.15 var(--hue-purple));
+	--color-purple-fg: #ffffff;
+	--color-purple-bg: oklch(0.97 0.015 var(--hue-purple));
+	--color-purple-text: oklch(0.5 0.15 var(--hue-purple));
+
+	/* Component specific: Work plan/Calendar */
+	--color-calendar-today: oklch(0.97 0.01 239);
+	--color-calendar-weekend: oklch(0.97 0.01 67 / 0.85);
+	--color-calendar-today-weekend: oklch(0.93 0.01 239);
+	--color-calendar-selected-border: oklch(50% 0.01 57);
+
+	/* Component specific: Highlight/Focus states */
+	--color-highlight-bg: rgb(255, 252, 246);
+	--color-highlight-border: rgb(211, 198, 177);
+
+	/* Component specific: Grid/Table */
+	--color-grid-row-hover: oklch(0.97 0.05 58);
+
+	/* State: Disabled */
+	--color-disabled-text: oklch(0.8 0 var(--hue-primary));
+
+	/* Elevation: Shadows */
+	--shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.1);
+	--shadow-md: 0px 7px 29px rgba(100, 100, 111, 0.2);
+	--shadow-lg: 0px 3px 10px rgba(100, 100, 111, 0.2);
+
+	/* Overlays */
+	--color-overlay: rgba(0, 0, 0, 0.5);
+	--color-overlay-light: rgba(255, 255, 255, 0.5);
+
+	/* Component specific: Tooltip */
+	--color-tooltip-bg: #333;
+	--color-tooltip-fg: white;
+}
+
+.dark-mode {
+	/* Base semantic colors - dark mode */
+	--color-base-white: #ffffff;
+	--color-base-black: #000000;
+
+	/* Background colors - softer, friendlier dark theme */
+	--color-bg-primary: #1c1c1c;
+	--color-bg-surface: #252525;
+
+	/* Data-viz series (validated against the dark surface) */
+	--color-viz-positive: #23a173;
+	--color-viz-info: #3d8ed6;
+	--color-viz-attention: #bd7f1f;
+	--color-viz-negative: #e66767;
+	--color-viz-special: #8b6de0;
+	--color-bg-surface-hover: #2f2f2f;
+	--color-bg-secondary: #333333;
+	--color-bg-tertiary: #282828;
+	--color-bg-subtle: #2a2a2a;
+	--color-bg-subtle-hover: oklch(0.33 0.02 58);
+
+	/* Border and divider colors */
+	--color-border-primary: #454545;
+	--color-border-secondary: #4f4f4f;
+	--color-border-tertiary: #404040;
+	--color-border-subtle: #353535;
+	--color-divider: #3a3a3a;
+
+	/* Text colors */
+	--color-text-primary: #ececec;
+	--color-text-secondary: #c5c5c5;
+	--color-text-tertiary: #9f9f9f;
+	--color-text-muted: #888888;
+	--color-text-disabled: #707070;
+
+	/* Icon colors */
+	--color-icon-primary: #959595;
+	--color-icon-secondary: oklch(0.68 0.02 58);
+	--color-icon-active: oklch(0.78 0.08 58);
+	--filter-native-picker-indicator: invert(1) brightness(0.9);
+
+	/* Interactive element colors */
+	--color-interactive: var(--color-text-secondary);
+	--color-interactive-hover: rgba(255, 255, 255, 0.1);
+	--color-interactive-hover-bg: var(--color-bg-surface-hover);
+	--color-interactive-active-bg: oklch(0.3 0.05 58);
+	--color-interactive-active-fg: oklch(0.88 0.08 58);
+	--color-interactive-active-hover: oklch(0.28 0.05 58);
+	--color-on-surface: var(--color-text-primary);
+
+	/* Brand/Primary colors - slightly adjusted for dark mode */
+	--hue-primary: 56;
+	--color-primary: oklch(0.72 0.15 var(--hue-primary));
+	--color-primary-fg: #1c1c1c;
+	--color-primary-hover: oklch(0.77 0.14 var(--hue-primary));
+	--color-primary-disabled: oklch(0.45 0.08 var(--hue-primary));
+	--color-primary-subtle: oklch(0.25 0.04 var(--hue-primary));
+	--color-on-primary-subtle: oklch(0.97 0.08 var(--hue-primary));
+
+	/* Navigation specific */
+	--color-nav-item: oklch(0.72 0.02 58);
+	--color-nav-item-hover: rgba(255, 255, 255, 0.1);
+	--color-nav-item-active-bg: oklch(0.3 0.05 58);
+	--color-nav-item-active-fg: oklch(0.88 0.08 58);
+
+	/* Semantic: Info */
+	--hue-info: 230;
+	--color-info: oklch(0.68 0.15 var(--hue-info));
+	--color-info-fg: #1c1c1c;
+	--color-info-bg: oklch(0.25 0.04 var(--hue-info));
+	--color-info-text: oklch(0.73 0.12 var(--hue-info));
+	--color-info-surface: oklch(0.23 0.05 var(--hue-info));
+	--color-info-border: oklch(0.4 0.08 var(--hue-info));
+	--color-info-surface-text: oklch(0.78 0.1 var(--hue-info));
+	--color-link: oklch(0.73 0.15 var(--hue-info));
+
+	/* Semantic: Error/Danger */
+	--hue-error: 20;
+	--color-error: oklch(0.68 0.18 var(--hue-error));
+	--color-error-fg: #141414;
+	--color-error-bg: oklch(0.25 0.04 var(--hue-error));
+	--color-error-text: oklch(0.73 0.15 var(--hue-error));
+	--color-error-surface: oklch(0.23 0.06 var(--hue-error));
+	--color-error-border: oklch(0.45 0.12 var(--hue-error));
+	--color-error-surface-text: oklch(0.78 0.12 var(--hue-error));
+	--color-error-emphasis: oklch(0.68 0.18 var(--hue-error));
+	--color-status-error: oklch(0.65 0.2 var(--hue-error));
+
+	/* Semantic: Success */
+	--color-success: oklch(0.68 0.15 150);
+	--color-success-fg: #1c1c1c;
+	--color-success-hover: oklch(0.63 0.15 150);
+
+	--color-strength-weak: hsl(0, 65%, 51%);
+	--color-strength-fair: hsl(35, 85%, 50%);
+	--color-strength-good: hsl(80, 60%, 42%);
+	--color-strength-strong: hsl(140, 60%, 38%);
+
+	/* Status dot colors */
+	--color-green: oklch(0.68 0.15 150);
+	--color-orange: oklch(0.73 0.15 60);
+	--color-grey: oklch(0.6 0.02 58);
+
+	/* Semantic: Warning */
+	--color-warning-surface: oklch(0.3 0.08 80);
+	--color-warning-border: oklch(0.55 0.12 80);
+	--color-warning-text: oklch(0.83 0.1 80);
+
+	/* Semantic: Purple (for special states) */
+	--hue-purple: 300;
+	--color-purple: oklch(0.68 0.15 var(--hue-purple));
+	--color-purple-fg: #1c1c1c;
+	--color-purple-bg: oklch(0.25 0.04 var(--hue-purple));
+	--color-purple-text: oklch(0.73 0.12 var(--hue-purple));
+
+	/* Component specific: Work plan/Calendar */
+	--color-calendar-today: oklch(0.25 0.03 239);
+	--color-calendar-weekend: oklch(0.27 0.03 57);
+	--color-calendar-today-weekend: oklch(0.23 0.03 239);
+	--color-calendar-selected-border: oklch(0.65 0.08 57);
+
+	/* Component specific: Highlight/Focus states */
+	--color-highlight-bg: oklch(0.3 0.05 50);
+	--color-highlight-border: oklch(0.5 0.08 50);
+
+	/* Component specific: Grid/Table */
+	--color-grid-row-hover: oklch(0.3 0.03 58);
+
+	/* State: Disabled */
+	--color-disabled-text: oklch(0.45 0.02 var(--hue-primary));
+
+	/* Elevation: Shadows - softer in friendlier dark mode */
+	--shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.4);
+	--shadow-md: 0px 7px 29px rgba(0, 0, 0, 0.5);
+	--shadow-lg: 0px 3px 10px rgba(0, 0, 0, 0.4);
+
+	/* Overlays */
+	--color-overlay: rgba(0, 0, 0, 0.65);
+	--color-overlay-light: rgba(0, 0, 0, 0.25);
+
+	/* Component specific: Tooltip */
+	--color-tooltip-bg: #e8e8e8;
+	--color-tooltip-fg: #1a1a1a;
+}
+
+.tooltip-popover {
+	position: absolute;
+	background-color: var(--color-tooltip-bg);
+	color: var(--color-tooltip-fg);
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	line-height: 1.4;
+	pointer-events: none;
+	z-index: 100000;
+	width: max-content;
+	max-width: 20rem;
+	white-space: pre-wrap;
+	top: 0;
+	left: 0;
+}
