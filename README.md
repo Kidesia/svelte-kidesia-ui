@@ -50,6 +50,20 @@ pnpm test        # vitest (unit)
 pnpm build       # vite build + svelte-package + publint
 ```
 
+## Releasing
+
+The package is published publicly to [npm](https://www.npmjs.com/package/kidesia-ui)
+by the `Release` workflow whenever a version tag is pushed:
+
+```sh
+npm version 0.1.0        # bumps package.json and creates the v0.1.0 tag
+git push --follow-tags
+```
+
+The workflow verifies lint, types, and tests, builds via `svelte-package`, validates
+the result with `publint`, and publishes with npm provenance. It requires an `NPM_TOKEN`
+repository secret (an npm automation token with publish rights for `kidesia-ui`).
+
 Components live in `src/lib/elements/` and mirror the app files as closely as possible
 so app-to-library diffs stay reviewable during the migration. Conventions are documented
 in `CLAUDE.md`; the extraction/migration plan and its status live in
