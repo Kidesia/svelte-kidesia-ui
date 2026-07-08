@@ -330,6 +330,29 @@
 	--color-tooltip-fg: #1a1a1a;
 }
 
+/* Experimental warm scheme from kidesia-frontend/_design/design.md, toggled via a
+   class like .dark-mode. Pure data — components must not reference this class.
+   Primary values derive from brand.orange #FF9D47 / #EB6D00 on the hue-56 ramp. */
+.theme-warm {
+	--color-bg-page: #fef7f0;
+	--color-bg-surface: #ffffff;
+	--color-border-primary: #ebebeb;
+
+	--color-text-primary: #1f1f1f;
+	--color-text-secondary: #393939;
+	--color-text-tertiary: #525252;
+	--color-text-muted: #858585;
+	--color-text-disabled: #9e9e9e;
+
+	--hue-primary: 58;
+	--color-primary: oklch(0.78 0.155 var(--hue-primary));
+	--color-primary-fg: #1f1f1f;
+	--color-primary-hover: oklch(0.7 0.17 var(--hue-primary));
+
+	--shadow-sm: -4px -4px 14px 0 rgba(125, 88, 3, 0.08);
+	--focus-ring: 3px solid rgba(235, 109, 0, 0.18);
+}
+
 .tooltip-popover {
 	position: absolute;
 	background-color: var(--color-tooltip-bg);
