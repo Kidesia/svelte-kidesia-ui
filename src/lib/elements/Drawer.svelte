@@ -265,7 +265,7 @@
 	.title-link {
 		padding: 0.25rem 0.625rem;
 		margin-left: -0.625rem;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		text-decoration: none;
 		transition: background-color 0.15s ease;
 
@@ -306,7 +306,7 @@
 		width: 2.5rem;
 		height: 2.5rem;
 		border: none;
-		border-radius: 999px;
+		border-radius: var(--radius-pill);
 		background: none;
 		color: var(--color-text-secondary);
 		cursor: pointer;
@@ -327,6 +327,6 @@
 		min-height: 0;
 		overflow-y: auto;
 		padding: 1rem 1.5rem 1.5rem;
-		background-color: var(--color-bg-primary);
+		background-color: var(--color-bg-inset);
 	}
 </style>

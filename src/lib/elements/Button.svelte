@@ -110,7 +110,7 @@
 		align-items: center;
 		gap: 0.5rem;
 		padding: 0.5rem 1rem;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		border: 1px solid var(--btn-border-color);
 		background-color: var(--btn-bg);
 		color: var(--btn-fg);

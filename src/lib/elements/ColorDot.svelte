@@ -30,7 +30,7 @@
 		display: inline-block;
 		width: 1rem;
 		height: 1rem;
-		border-radius: 999px;
+		border-radius: var(--radius-pill);
 		background-color: var(--dot-color);
 		flex-shrink: 0;
 	}

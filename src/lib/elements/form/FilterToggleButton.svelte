@@ -84,7 +84,7 @@
 		height: calc(1.5rem + 0.5rem + 2px);
 		padding: 0.25rem 0.5rem;
 		border: 1px solid var(--toggle-border-color);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		background: var(--toggle-bg);
 		color: var(--toggle-fg);
 		line-height: 1.5;

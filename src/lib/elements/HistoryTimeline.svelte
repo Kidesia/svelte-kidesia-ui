@@ -199,7 +199,7 @@
 	}
 
 	.field-diff {
-		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+		font-family: var(--font-mono);
 		word-break: break-all;
 		padding-left: 0.5rem;
 		width: 100%;

@@ -68,7 +68,7 @@
 		padding: 1rem 1rem 0.75rem 1rem;
 		white-space: nowrap;
 		color: var(--color-text-muted);
-		border-radius: 0.5rem 0.5rem 0 0;
+		border-radius: var(--radius-md) var(--radius-md) 0 0;
 		border: 1px solid transparent;
 		transition:
 			color 0.15s ease,
@@ -106,7 +106,7 @@
 	}
 
 	a:focus-visible {
-		outline: 2px solid var(--color-primary);
+		outline: var(--focus-ring);
 		outline-offset: -2px;
 	}
 </style>

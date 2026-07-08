@@ -76,7 +76,7 @@
 		align-items: flex-start;
 		gap: 0.5rem;
 		padding: 0.6rem 0.75rem 0.6rem 1rem;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		box-shadow:
 			0 4px 16px oklch(0% 0 0 / 18%),
 			0 1px 4px oklch(0% 0 0 / 10%);
@@ -117,7 +117,7 @@
 		padding: 0;
 		border: none;
 		background: transparent;
-		border-radius: 0.25rem;
+		border-radius: var(--radius-xs);
 		color: inherit;
 		cursor: pointer;
 		opacity: 0.75;

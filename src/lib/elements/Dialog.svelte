@@ -221,7 +221,7 @@
 	dialog {
 		border: none;
 		padding: 0;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		margin: auto;
 
 		&::backdrop {
@@ -282,7 +282,7 @@
 			flex: 1 1 auto;
 			min-height: 0;
 			overflow-y: auto;
-			background: var(--color-bg-primary);
+			background: var(--color-bg-inset);
 		}
 
 		footer {
@@ -293,7 +293,7 @@
 			gap: 1rem;
 			padding: 1rem 1.5rem;
 
-			background-color: var(--color-bg-primary);
+			background-color: var(--color-bg-inset);
 			border-top: var(--color-border-primary) 1px solid;
 
 			.left,

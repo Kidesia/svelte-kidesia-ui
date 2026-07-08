@@ -18,7 +18,7 @@
 		align-items: center;
 		gap: 0.55rem;
 		padding: 0.45rem 0.75rem;
-		border-radius: 999px;
+		border-radius: var(--radius-pill);
 		background-color: var(--color-bg-subtle);
 		color: var(--color-text-secondary);
 		font-size: 0.85rem;
@@ -32,7 +32,7 @@
 		min-width: 1.6rem;
 		height: 1.6rem;
 		padding: 0 0.4rem;
-		border-radius: 999px;
+		border-radius: var(--radius-pill);
 		background-color: var(--color-bg-surface);
 		color: var(--color-text-primary);
 		font-weight: 700;

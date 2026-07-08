@@ -191,7 +191,7 @@
 			background-color: var(--color-bg-secondary);
 			color: var(--color-text-primary);
 			padding: 0.5rem 1rem;
-			border-radius: 0.5rem;
+			border-radius: var(--radius-md);
 			font-weight: 500;
 			line-height: 1.25rem;
 			gap: 0.5rem;
@@ -279,7 +279,7 @@
 		flex-direction: column;
 		width: 100%;
 		border: 1px solid var(--color-border-secondary);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		box-shadow: var(--shadow-md);
 		max-width: 100%;
 		max-height: min(85vh, var(--dropdown-available-height, calc(100dvh - 1rem)));
@@ -308,7 +308,7 @@
 		justify-content: center;
 		padding: 0.35rem;
 		border: 1px solid var(--color-border-subtle);
-		border-radius: 999px;
+		border-radius: var(--radius-pill);
 		background-color: var(--color-bg-surface);
 		color: var(--color-text-secondary);
 		font-size: 1rem;

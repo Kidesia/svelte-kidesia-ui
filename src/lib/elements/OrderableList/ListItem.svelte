@@ -102,7 +102,7 @@
 		gap: 0.5rem;
 		padding: 0.25rem;
 		padding-left: 0.75rem;
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		border: 1px solid var(--color-border-primary);
 		background-color: var(--color-bg-surface);
 		user-select: none;

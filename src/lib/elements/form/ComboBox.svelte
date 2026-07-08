@@ -282,7 +282,7 @@
 		background: var(--color-bg-surface);
 		color: var(--color-text-primary);
 		border: 1px solid var(--color-border-primary);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		box-shadow: var(--shadow-sm);
 		min-width: 240px;
 		display: flex;
@@ -298,9 +298,9 @@
 		width: 100%;
 		padding: 0.25rem 0.5rem;
 		color: var(--color-text-primary);
-		background-color: var(--color-bg-primary);
+		background-color: var(--color-bg-inset);
 		border: 1px solid var(--color-border-tertiary);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 	}
 
 	.search-container input::placeholder {

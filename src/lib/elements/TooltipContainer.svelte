@@ -124,7 +124,7 @@
 		border: 1px solid var(--color-border-primary);
 		background-color: var(--color-bg-surface);
 		backdrop-filter: blur(8px);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		z-index: 9999;
 		box-shadow: var(--shadow-md);
 		overflow: auto;

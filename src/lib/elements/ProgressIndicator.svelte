@@ -40,7 +40,7 @@
 		width: 100%;
 		height: 0.4rem;
 		background-color: var(--color-border-primary);
-		border-radius: 0.25rem;
+		border-radius: var(--radius-xs);
 		overflow: hidden;
 	}
 

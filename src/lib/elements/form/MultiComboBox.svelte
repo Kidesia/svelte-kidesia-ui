@@ -301,7 +301,7 @@
 		align-items: center;
 		gap: 0.25rem;
 		padding: 0.25rem 0.35rem 0.25rem 0.75rem;
-		border-radius: 999px;
+		border-radius: var(--radius-pill);
 		background-color: var(--color-primary-subtle);
 		border: 1px solid var(--color-primary);
 		color: var(--color-on-primary-subtle);
@@ -314,7 +314,7 @@
 		justify-content: center;
 		padding: 0.15rem;
 		border: none;
-		border-radius: 999px;
+		border-radius: var(--radius-pill);
 		background: transparent;
 		color: inherit;
 		font-size: 0.875rem;
@@ -358,7 +358,7 @@
 		z-index: 1000;
 		background: var(--color-bg-surface);
 		border: 1px solid var(--color-border-primary);
-		border-radius: 0.5rem;
+		border-radius: var(--radius-md);
 		box-shadow: var(--shadow-sm);
 		min-width: 240px;
 		display: flex;
@@ -386,7 +386,7 @@
 	li {
 		padding: 0.625rem 0.75rem;
 		cursor: pointer;
-		border-radius: 0.375rem;
+		border-radius: var(--radius-sm);
 	}
 
 	li.highlighted {
